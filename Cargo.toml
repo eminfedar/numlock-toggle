@@ -1,0 +1,12 @@
+[package]
+name = "numlock-toggle"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+umacro-lib = "0.1.0"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
