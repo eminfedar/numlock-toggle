@@ -23,7 +23,7 @@ jobs:
     - name: Install libudev
       run: sudo apt-get install -y libudev-dev
     - name: Build
-    - run: cargo build --verbose
+      run: cargo build --verbose
     - name: Publish
       if: github.ref_type == 'tag'
       uses: softprops/action-gh-release@v1
