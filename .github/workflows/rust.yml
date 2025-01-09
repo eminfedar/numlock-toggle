@@ -25,7 +25,7 @@ jobs:
     - name: Install libudev
       run: sudo apt-get install -y libudev-dev
     - name: Build
-      run: cargo build --verbose
+      run: cargo build --release
     - name: Rename with Version & Platform
       if: github.ref_type == 'tag'
       run: mv ${{ env.RELEASE_FILE }} ${{ env.RELEASE_FILE }}_${{ github.ref_name }}
